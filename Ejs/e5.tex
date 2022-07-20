@@ -1,0 +1,29 @@
+\item \textbf{Extensión de transformaciones lineales.} Sea $V$ un $\K$-EV de dimensión finita y sea $U$ un subespacio propio de $V$. Probar que si $S:U\to W$ es una transformación linal, entonces existe $T:V\to W$ tal que,
+    \begin{center}
+        $Tu=Su\quad\forall u\in U.$        
+    \end{center}
+    \begin{mdframed}[style=s]
+        Supongamos que
+        \begin{center}
+            $B_U=\{b_1,\dots,b_m\}$ es una base de $U$\\
+            $B_V=\{b_1,\dots,b_m,b_{m+1},\dots,b_n\}$ es una base de $V$\\
+            $B_W=\{w_1,\dots,w_k\}$ es una base de $W$
+        \end{center}
+        La transformación $S$ queda unívocamente determinada por los transformados de la base de $U$. Como no se sabe cuáles son las transformaciones, planteo de manera general\[\begin{cases}
+            S(b_1)=x_1\\
+            \quad\vdots\\
+            S(b_m)=x_m
+        \end{cases}\qquad x_1,\dots,x_m\in W\]
+        Los transformación $T$ también queda determinada de manera única por los transformados de la base del dominio, en este caso $V$. Los transformados pueden ser cualquier elemento de $W$. Sin embargo, por conveniencia se elegirán los transformados de los primeros $m$ elementos de la base de manera que coincidan con los transformados de $S$, el resto pueden ser cualquier $x\in W$.\[\begin{cases}
+            T(b_1)=x_1\\
+            \quad\vdots\\
+            T(b_m)=x_m\\
+            T(b_{m+1})=x_{m+1}\\
+            \quad\vdots\\
+            T(b_n)=x_n
+        \end{cases}\qquad x_1,\dots,x_n\in W\]
+        Hasta este punto, tengo las dos transformaciones lineales, resta comprobar la igualdad planteada. Para ello, hay que recordar que cada $u\in U$ se escribe como \[u=\sum_{i=1}^mc_ib_i\qquad c_i\in\K\]
+        Por lo tanto, se tiene que\[S(u)=S\left(\sum_{i=1}^mc_ib_i\right)\]
+        Como $S$ es transformación lineal, se cumple que\[S(u)=\sum_{i=1}^mc_iS(b_i)=\sum_{i=1}^mc_ix_i=\sum_{i=1}^mc_iT(b_i)=T(u)\]
+        Con lo cual, queda demostrado que\[Su=Tu\qquad\forall u\in U\]
+    \end{mdframed}

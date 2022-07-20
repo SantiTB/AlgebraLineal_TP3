@@ -1,0 +1,113 @@
+\item Considerar cada una de las transformaciones lineales del ejercicio 11 de la práctica 2.
+    \begin{enumerate}
+        \item Hallar su representación matricial en la base canónica de $\R^2$.
+            \begin{mdframed}[style=s]
+                \begin{enumerate}
+                    \item[a)] $R_\alpha(x,y)=(x\cos\alpha-y\sin\alpha,x\sin\alpha+y\cos\alpha)$
+                        \begin{center}
+                            $[R_\alpha]_\E=\left([R_\alpha(1,0)]_\E\quad[R_\alpha(0,1)]_\E\right)$\\
+                            $\to[R_\alpha]_\E=\begin{pmatrix}
+                                \cos\alpha&-\sin\alpha\\\sin\alpha&\cos\alpha
+                            \end{pmatrix}$
+                        \end{center}
+                    \item[b)] $S_Y(x,y)=(-x,y)$
+                        \begin{center}
+                            $[S_Y]_\E=\left([S_Y(1,0)]\quad[S_Y(0,1)]_\E\right)$\\
+                            $\to[S_Y]_\E=\begin{pmatrix}
+                                -1&0\\0&1
+                            \end{pmatrix}$
+                        \end{center}
+                    \item[c)] $H_k(x,y)=(kx,ky)$
+                        \begin{center}
+                            $[H_k]_\E=\left([H_k(1,0)]\quad[H_k(0,1)]_\E\right)$\\
+                            $\to[H_k]_\E=\begin{pmatrix}
+                                k&0\\0&k
+                            \end{pmatrix}$
+                        \end{center}
+                    \item[d)] $P_X(x,y)=(x,0)$
+                        \begin{center}
+                            $[P_X]_\E=\left([P_X(1,0)]\quad[P_X(0,1)]_\E\right)$\\
+                            $\to[P_X]_\E=\begin{pmatrix}
+                                1&0\\0&0
+                            \end{pmatrix}$
+                        \end{center}
+                \end{enumerate}
+            \end{mdframed}
+        \item Determinar su núcleo e imagen y la dimensión de ambos. Verificar que la dimensión del núcleo más la de la imagen coincide con la dimensión del espacio de partida.
+            \begin{mdframed}[style=s]
+                \begin{enumerate}
+                    \item[a)]
+                        Para el núcleo: $[R_\alpha]_\E\cdot(x\quad y)^T=\vec{0}\to \begin{cases}
+                            x\cos\alpha-y\sin\alpha=0\\
+                            x\sin\alpha+y\cos\alpha=0
+                        \end{cases}\to x=y=0$\[\to N(R_\alpha)=\{(0,0)\}\]
+                        Todo elemento de la imagen es $[R_\alpha]_\E\cdot(x\quad y)^T=(x\cos\alpha-y\sin\alpha,x\sin\alpha+y\cos\alpha)\\=x(\cos\alpha,\sin\alpha)+y(-\sin\alpha,\cos\alpha)$
+                        \[Im(R_\alpha)=\overline{\{(\cos\alpha,\sin\alpha),(-\sin\alpha,\cos\alpha)\}}\]
+                        La imagen está generada por esos dos vectores, que como se vio con el núcleo, son li. Entonces, $dim(Im(R_\alpha))=2$. Se cumple que \[2=dim(\R^2)=dim(Im(R_\alpha))+dim(N(R_\alpha))=2+0\]
+                    \item[b)]
+                        $\begin{pmatrix}
+                            -1&0\\0&1
+                        \end{pmatrix}\begin{pmatrix}
+                            x\\y
+                        \end{pmatrix}=\begin{pmatrix}
+                            0\\0
+                        \end{pmatrix}\to x=y=0$\[\to N(S_Y)=\{(0,0)\}\]
+                        Sea $v\in Im(S_Y)\to v=\begin{pmatrix}
+                            -1&0\\0&1
+                        \end{pmatrix}\begin{pmatrix}
+                            x\\y
+                        \end{pmatrix}=\begin{pmatrix}
+                            -x\\y
+                        \end{pmatrix}=x\begin{pmatrix}
+                            -1\\0
+                        \end{pmatrix}+y\begin{pmatrix}
+                            0\\1
+                        \end{pmatrix}$\\
+                        Por lo tanto, \[Im(S_Y)=\overline{\{(-1,0),(0,1)\}}\]
+                        Se cumple que \[2=dim(Im(S_Y))+dim(N(S_Y))=2+0\]
+                    \item[c)]
+                        $\begin{pmatrix}
+                            k&0\\0&k
+                        \end{pmatrix}\begin{pmatrix}
+                            x\\y
+                        \end{pmatrix}=\begin{pmatrix}
+                            0\\0
+                        \end{pmatrix}\to x=y=0$\[\to N(H_k)=\{(0,0)\}\]
+                        suponiendo que $k\neq 0$\\
+                        Sea $v\in Im(H_k)\to v=\begin{pmatrix}
+                            k&0\\0&k
+                        \end{pmatrix}\begin{pmatrix}
+                            x\\y
+                        \end{pmatrix}=\begin{pmatrix}
+                            kx\\ky
+                        \end{pmatrix}=kx\begin{pmatrix}
+                            1\\0
+                        \end{pmatrix}+ky\begin{pmatrix}
+                            0\\1
+                        \end{pmatrix}$\\
+                        Por lo tanto,\[Im(H_k)=\overline{\{(1,0),(0,1)\}}\]
+                        Se cumple que \[2=dim(Im(H_k))+dim(N(H_k))=2+0\] 
+                    \item[d)]
+                        $\begin{pmatrix}
+                            1&0\\0&0
+                        \end{pmatrix}\begin{pmatrix}
+                            x\\y
+                        \end{pmatrix}=\begin{pmatrix}
+                            0\\0
+                        \end{pmatrix}\to x=0$\[\to N(P_X)=\overline{\{(0,1)\}}\to dim(N(P_X))=1\]
+                        Sea $v\in Im(P_X), v=\begin{pmatrix}
+                            1&0\\0&0
+                        \end{pmatrix}\begin{pmatrix}
+                            x\\y
+                        \end{pmatrix}=\begin{pmatrix}
+                            x\\0
+                        \end{pmatrix}$\[\to Im(P_X)=\overline{\{(1,0)\}}\to dim(Im(P_X))=1\]
+                        Se cumple que \[2=dim(\R^2)=dim(Im(P_X))+dim(N(P_X))=1+1\]
+                \end{enumerate}
+            \end{mdframed}
+        \item Analizar inyectividad, suryectividad y biyectividad.
+            \begin{mdframed}[style=s]
+                En los primeros tres casos, $N(T)=\{0\}\to$ son inyectivas, como la dimensión de la imagen coincide con el codominio y además es subespacio de éste, $Im(T)=\R^2\to $ son suryectivas, con lo cual, son biyectivas.\\
+                En el caso de $P_X$, $N(P_X)\neq \{0\}$ y $Im(P_X)\neq \R^2$, entonces no es ni iyectiva, ni suryectiva y menos biyectiva.
+            \end{mdframed}
+    \end{enumerate}

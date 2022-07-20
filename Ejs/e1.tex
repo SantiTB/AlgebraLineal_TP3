@@ -1,0 +1,29 @@
+\item Sean $V$ y $W$ dos $\K$-EV y sea $T:V\to W$ una transformación lineal. Supongamos también que $S_V$ y $S_W$ son subespacios de $V$ y $W$, respectivamente. Probar que $N(T)$, $T(S_V):=\{w\in W:w=T(v)$ para $v\in S_V\}$ y $T^{-1}(S_W):=\{v\in V:T(v)\in S_W\}$ son subespacios vectoriales de $V$ y $W$ según corresponda.
+    \begin{mdframed}[style=s]
+        \begin{itemize}
+            \item $N(T)=\{v\in V:T(v)=0_W\}$\\
+                Dados $\alpha\in\K, u,v\in N(T)$
+                \begin{enumerate}
+                    \item[i.]   $0_V\in N(T)$ ya que toda transformación lineal $T:V\to W$ cumple $T(0_V)=0_W$
+                    \item[ii.]  $T(u+v)=T(u)+T(v)=0+0=0\to u+v\in N(T)\quad\forall u,v\in N(T)$
+                    \item[iii.] $T(\alpha u)=\alpha T(u)=\alpha\dot0=0\to \alpha u\in N(T)\quad\forall \alpha\in\K,u\in N(T)$
+                \end{enumerate}
+                Por lo tanto, $N(T)$ es un subespacio vectorial de $V$.
+            \item $T(S_V):=\{w\in W:w=T(v)$ para $v\in S_V\}$\\
+                Dados $\alpha\in\K, u,v\in T(S_V)$
+                \begin{enumerate}
+                    \item[i.] $S_V$ es subespacio de $V$, entonces $0_V\in S_V\to 0_W\in T(S_V)$ ya que $0_W=T(0_V)$
+                    \item[ii.] $u+v=T(a)+T(b),\quad a,b\in S_V$ ya que $u,v\in T(S_V)\to u+v=T(a+b)$ por aditividad. Entonces $u+v\in T(S_V)$
+                    \item[iii.] $\alpha u=\alpha T(a)=T(\alpha a)\to \alpha u\in T(S_V)$
+                \end{enumerate}
+                Por lo tanto, $T(S_V)$ es un subespacio vectorial de $W$.
+            \item $T^{-1}(S_W):=\{v\in V:T(v)\in S_W\}$\\
+                Sean $\alpha\in\K,u,v\in T^{-1}(S_W)$
+                \begin{enumerate}
+                    \item[i.] $0_V\in T^{-1}(S_W)$ ya que $T(0_V)=0_W\in S_W$ por ser subespacio de $W$
+                    \item[ii.] $T(u),T(v)\in S_W\to T(u)+T(v)\in S_W\to T(u+v)\in S_W\to u+v\in T^{-1}(S_W)$
+                    \item[iii.] $T(u)\in S_W\to \alpha T(u)\in S_W\to T(\alpha u)\in S_W\to \alpha u\in T^{-1}(S_W)$ 
+                \end{enumerate}
+                Por lo tanto, $T^{-1}(S_W)$ es un subespacio vectorial de $V$
+        \end{itemize}
+    \end{mdframed}

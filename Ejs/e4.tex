@@ -1,0 +1,15 @@
+\item Sea $V$ un $\K$-EV y $T:V\to V$ una transformación lineal. Probar que son equivalentes:
+    \begin{enumerate}
+        \item $N(T)\cap Im(T)={0}$
+        \item Si $T(T(v))=0,$ entonces $T(v)=0$ para $v\in V$
+    \end{enumerate}
+    \begin{mdframed}[style=s]
+        \begin{itemize}
+            \item ($a\Rightarrow b$)\\
+                Arrancamos con la hipótesis $N(T)\cap Im(T)=0$. $v\in V\to T(v)\in Im(T)$. Supongamos que \[T(T(v))=0\]
+                es decir, la transformada de un elemento de la imagen es el elemento neutro. Por definición, $N(T)=\{v\in V:T(v)=0\}$, por ende, $T(v)\in N(T)\to T(v)\in N(T)\cap Im(T)$ y como por hipótesis, la intersección es nula, tenemos que\[T(v)=0\]
+            \item ($b\Rightarrow a$)\\
+                Tenemos que $T(T(v))=0\to T(v)=0$ para $v\in V$. En palabras, si la transformada de un elemento $T(v)$ de la imagen me da el elemento neutro, entonces $T(v)$ es el elemento neutro. Supongamos que $N(T)\cap Im(T)\neq 0$. Entonces existe un elemento $x\neq0$ que cumple $T(x)=0$ y $T(y)=x$ para algún $y\in V\to$ por hipótesis si $T(T(y))=0\to T(y)=0\to x=0$. Con lo cual si ese elemento $x$ existe, tiene que ser el $0$\[\to N(T)\cap Im(T)=0\]
+        \end{itemize}
+        Por lo tanto $a\Leftrightarrow b$
+    \end{mdframed}

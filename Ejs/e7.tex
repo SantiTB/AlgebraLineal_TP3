@@ -1,0 +1,24 @@
+\item Sea $V$ un $\K$-EV de dimensión finita y sea $T:V\to V$ una transformación lineal tal que $Im(T^2)=Im(T)$. Probar que $Im(T)\cap N(T)=\{0\}$.
+    \begin{mdframed}[style=s]
+        Supongamos que $Im(T)\cap N(T)\neq \{0\}$, entonces existe $x\in V:$
+        \begin{equation}
+            T(x)=0,\qquad x=T(y)
+        \end{equation}
+        Como $Im(T^2)=Im(T)$, resulta que $dim(Im(T^2))=dim(Im(T))$. Por el teorema de las dimensiones:
+        \[dim(V)=dim(Im(T))+dim(N(T))\qquad dim(V)=dim(Im(T^2))+dim(N(T^2))\]
+        (Al usar el teorema de las dimensiones con $T^2$, estoy asumiendo que ésta es una transformación lineal, más abajo se muestra que efectivamente lo es.)\\
+        Esto lleva a
+        \[dim(N(T^2))=dim(N(T))\]
+        Sea un elemento $n\in N(T)\to T(n)=0\to T^2(n)=0\to n\in N(T^2)\to N(T)\subset N(T^2)$ y como las dimensiones coinciden,
+        \[N(T^2)=N(T)\]
+        De (1) se obtiene que $T^2(y)=0\to y\in N(T^2)\to y\in N(T)\to T(y)=x=0$. Por lo tanto, el elemento $x$ de la intersección debe ser el $0$.\vspace{6pt}\\
+        \textbf{$T^2$ es una transformación lineal.}\\
+        Sea $u,v\in V,\alpha\in\K$
+        \begin{align*}
+            T^2(\alpha u+v)&=T(T(\alpha u+v))&&\text{Definición }T^2\\
+            &=T(\alpha T(u)+T(v))&&\text{Linealidad de }T\\
+            &=\alpha T(T(u))+T(T(v))&&\text{Linealidad de }T\\
+            &=\alpha T^2(u)+T^2(v)&&\text{Definición }T^2
+        \end{align*}
+        Por lo tanto, $T^2$ es una transformación lineal.
+    \end{mdframed}

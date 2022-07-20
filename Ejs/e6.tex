@@ -1,0 +1,57 @@
+\item Determinar en cada caso una transformación lineal $T:\R^3\to\R^3$ que verifique lo pedido.
+    \begin{enumerate}
+        \item $(1,1,0)\in N(T)$ y $dim(Im(T))=1$.
+            \begin{mdframed}[style=s]
+                Del teorema de las dimensiones:\[dim(\R^3)=dim(N(T))+dim(Im(T))\to dim(N(T))=2\]
+                Elijo como base de $\R^3$ a $B=\{(1,1,1),(1,1,0),(1,0,0)\}$. Una transformación está determinada por los transformados de la base y como quiero que $dim(N(T))=2$ y que además el $(1,1,0)\in N(T)$\[\begin{matrix}
+                    T(1,1,1)=(0,0,0)\\
+                    T(1,1,0)=(0,0,0)\\
+                    T(1,0,0)=(1,0,0)
+                \end{matrix}\]
+                Un vector de $\R^3$ se escribe $(x,y,z)=\alpha(1,1,1)+\beta(1,1,0)+\gamma(1,0,0)\to$\[\begin{cases}
+                    x=\alpha+\beta+\gamma\\
+                    y=\alpha+\beta\\
+                    z=\alpha
+                \end{cases}\to\begin{cases}
+                    \alpha=z\\
+                    \beta=y-z\\
+                    \gamma=x-y
+                \end{cases}\]
+                Por lo tanto
+                \begin{center}
+                    $T(x,y,z)=zT(1,1,1)+(y-z)T(1,1,0)+(x-y)T(1,0,0)$\\
+                    $T(x,y,z)=(x-y,0,0)$
+                \end{center}
+            \end{mdframed}
+        \item $N(T)\cap Im(T)=\overline{\{(1,1,2)\}}$.
+            \begin{mdframed}[style=s]
+                Propongo $dim(N(T))=2\to dim(Im(T))=1$. Para satisfacer la intersección:\[\begin{matrix}
+                    T(1,1,2)=(0,0,0)\\
+                    T(0,1,0)=(0,0,0)\\
+                    T(0,0,1)=(1,1,2)
+                \end{matrix}\]
+                Un vector $v\in\R^3$ puede escribirse $v=(x,y,z)=\alpha(1,1,2)+\beta(0,1,0)+\gamma(0,0,1)$\[\begin{cases}
+                    x=\alpha\\
+                    y=\alpha+\beta\\
+                    z=2\alpha+\gamma
+                \end{cases}\to\begin{cases}
+                    \alpha=x\\
+                    \beta=y-x\\
+                    \gamma=z-2x
+                \end{cases}\]
+                Por lo tanto,
+                \begin{center}
+                    $T(x,y,z)=xT(1,1,2)+(y-x)T(0,1,0)+(z-2x)T(0,0,1)$\\
+                    $T(x,y,z)=(z-2x,z-2x,2z-4x)$
+                \end{center}
+            \end{mdframed}
+        \item $N(T)\neq\{(0,0,0)\}, Im(T)\neq\{(0,0,0)\}$ y $N(T)\cap Im(T)=\{(0,0,0)\}$.
+            \begin{mdframed}[style=s]
+                Propongo \[\begin{cases}
+                    T(1,0,0)=(0,0,0)\\
+                    T(0,1,0)=(0,0,0)\\
+                    T(0,0,1)=(0,0,1)
+                \end{cases}\to T(x,y,z)=(0,0,z)\]
+                En donde $Im(T)=\overline{\{(1,0,0),(0,1,0)\}}$ y $N(T)=\overline{\{(0,0,1)\}}$.
+            \end{mdframed}
+    \end{enumerate}

@@ -1,0 +1,26 @@
+\item Sea $V$ un $\K$-EV de dimensión $n$ y sea $S=\{v_1,\dots,v_m\}$ un conjunto finito de vectores de $V$. Definimos $E:\K^m\to V$ como la transformación dada por\[E(k_1,\dots,k_m)=k_1v_1+\dots+k_mv_m.\]\begin{enumerate}
+    \item Probar que $E$ es lineal.
+        \begin{mdframed}[style=s]
+            Sean $\alpha\in\K\quad x,y\in\K^m$
+            \begin{align*}
+                E(\alpha x+y)&=E(\alpha(x_1,\dots,x_m)+(y_1,\dots,y_m))\\
+                &=E(\alpha x_1+y_1,\dots,\alpha x_m+y_m)&&\text{Suma y prod por escalar en }\K^m\\
+                &=(\alpha x_1+y_1)v_1+\dots+(\alpha x_m+y_m)v_m&&\text{Definición }E\\
+                &=\alpha x_1v_1+y_1v_1+\dots+\alpha x_mv_m+y_mv_m&&\text{Distributividad en }V\\
+                &=\alpha(x_1v_1+\dots+x_mv_m)+y_1v_1+\dots+y_mv_m&&\text{Prod por esc y conmut en }V\\
+                &=\alpha E(x)+E(y)&&\text{Definición }E
+            \end{align*}
+            Por lo tanto, $E$ es lineal.
+        \end{mdframed}
+    \item Probar que $E$ es inyectiva si, y sólo si, $S$ es un conjunto de vectores linealmente independientes.
+        \begin{mdframed}[style=s]
+            $E$ es inyectiva, $\Leftrightarrow N(E)=\{0\}\Leftrightarrow E(k_1,\dots,k_m)=k_1v_1+\dots+k_mv_m=0 \Leftrightarrow k_1=\dots=k_m=0\\\Leftrightarrow S=\{v_1,\dots,v_m\}$ es un conjunto li.
+        \end{mdframed}
+    \item Probar que $E$ es suryectiva si, y sólo si, $S$ es un conjunto de vectores que generan $V$.
+        \begin{mdframed}[style=s]
+            \begin{itemize}
+                \item $E$ es suryectiva $\Rightarrow Im(E)=V\Rightarrow$ como la imagen está generada por $S$, $S$ genera a $V$.
+                \item Si $S$ genera a $V$, un $v\in V$ cumple $v=k_1v_1+\dots+k_mv_m$, los elementos de $Im(E)$ también están generados por $S$, como ambos espacios están generados por el mismo conjunto, $Im(E)=V\Rightarrow E$ es suryectiva.
+            \end{itemize}
+        \end{mdframed}
+\end{enumerate}

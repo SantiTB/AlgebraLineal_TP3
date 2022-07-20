@@ -1,0 +1,42 @@
+\item Sea $T:\R^3\to\R^2$ dada por $T(x,y,z)=(x+y,x+z)$.
+    \begin{enumerate}
+        \item Probar que $T$ es una transformación lineal.
+            \begin{mdframed}[style=s]
+                Dados $\rho\in\R,u,v\in\R^3$
+                \begin{align*}
+                    T(\rho u+v)&=T(\rho(u_x,u_y,u_z)+(v_x,v_y,v_z))\\
+                    \text{Prod por escalar y suma en }\R^3&=T(\rho u_x+v_x,\rho u_y+v_y,\rho u_z+v_z)\\
+                    \text{Definición T}&=(\rho u_x+v_x+\rho u_y+v_y,\rho u_x+v_x+\rho u_z+v_z)\\
+                    \text{Suma en }\R^2&=(\rho u_x+\rho u_y,\rho u_x+\rho u_z)+(v_x+v_y,v_x+v_z)\\
+                    \text{Prod por escalar en }\R^2&=\rho(u_x+u_y,u_x+u_z)+(v_x+v_y,v_x+v_z)\\
+                    \text{Definición T}&=\rho T(u)+T(v)
+                \end{align*}
+                Por lo tanto, $T$ es una transformación lineal.
+            \end{mdframed}
+        \item Hallar el núcleo de $T$ ¿Qué dimensión tiene?\pagebreak
+            \begin{mdframed}[style=s]
+                $N(T)=\{v\in\R^3:T(v)=(0,0)\}$. Para hallarlo, planteo:
+                \begin{align*}
+                    T(v)&=T(x,y,z)\\
+                    &=(x+y,x+z)\\
+                    &\to\begin{cases}
+                        x+y=0\\
+                        x+z=0
+                    \end{cases}\\
+                    &\to x=-y=-z\\
+                    &\to v=(-y,y,y)\\
+                    &\to v=y(-1,1,1)
+                \end{align*}
+                Por lo tanto, $N(T)=\overline{\{(-1,1,1)\}}$ y $dim(N(T))=1$.
+            \end{mdframed}
+        \item Hallar la imagen de $T$ ¿Qué dimensión tiene?
+            \begin{mdframed}[style=s]
+                $Im(T)=\{T(v)\in\R^2:v\in\R^3\}$. Sea $w\in Im(T),w=(x+y,x+z)=x(1,1)+y(1,0)+z(0,1)$. Por lo tanto, $\{(1,1),(1,0),(0,1)\}$ generan $Im(T)$. Como $(1,1)$ es combinación lineal de los otros dos, los vectores de la base canónica de $\R^2$ generan a $Im(T)$, por lo tanto, $Im(T)=\R^2\to dim(Im(T))=2$.
+            \end{mdframed}
+        \item Sea $C=\{(x,y):x=1\}$. Hallar $T^{-1}(C)$ ¿Es un subespacio?¿Contradice esto el ejercicio anterior?¿Por qué?
+            \begin{mdframed}[style=s]
+                $T^{-1}(C)=\{v\in\R^3:T(v)\in C\}$. Tengo que encontrar vectores de $\R^3$ que al ser transformados formen parte de $C$.\\
+                $T(x,y,z)=(x+y,x+z)=(1,b)\to x+y=1\to C=\{(x,y,z)\in\R^3:x+y=1\}$\\
+                No es subespacio ya que $(0,0,0)\notin C$, esto no contradice el ejercicio anterior. Ya que lo que se había demostrado es que $T^{-1}(S_W)$ es subespacio para $S_W$ subespacio del codominio, cosa que $C$ no cumple.
+            \end{mdframed}
+    \end{enumerate}

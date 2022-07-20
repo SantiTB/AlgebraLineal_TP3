@@ -1,0 +1,79 @@
+\item Para cada una de las transformaciones lineales del ejercicio 8 de la práctica 2, determinar su núcleo e imagen. Además analizar inyectividad, suryectividad y biyectividad.
+    \begin{mdframed}[style=s]
+        \begin{enumerate}
+            \item[(b)] $T:\R^{3\times1}\to\R^{3\times1}$ dada por $T\begin{pmatrix}
+                    x\\y\\z
+                \end{pmatrix}=\begin{pmatrix}
+                    2x-3y\\3y-2z\\2z
+                \end{pmatrix}$.
+                \begin{itemize}
+                    \item Núcleo\\
+                        $N(T)=\{A\in\R^{3\times1}:T(A)=0_{\R^{3\times1}}\}$\[\begin{pmatrix}
+                                2x-3y\\3y-2z\\2z
+                        \end{pmatrix}=\begin{pmatrix}
+                            0\\0\\0
+                        \end{pmatrix}\to\begin{cases}
+                            2x-3y=0\\
+                            3y-2z=0\\
+                            2z=0
+                        \end{cases}\to\begin{cases}
+                            x=0\\
+                            y=0\\
+                            z=0
+                        \end{cases}\]
+                        Por lo tanto, \[N(T)=\left\{\begin{pmatrix}
+                            0\\0\\0
+                        \end{pmatrix}\right\}\]
+                    \item Imagen\\
+                        $Im(T)=\{T(A)\in\R^{3\times1}:A\in\R^{3\times1}\}$. Los elementos de la imagen tienen la forma\[B=\begin{pmatrix}
+                            2x-3y\\3y-2z\\2z
+                        \end{pmatrix}=x\begin{pmatrix}
+                            2\\0\\0
+                        \end{pmatrix}+y\begin{pmatrix}
+                            -3\\3\\0
+                        \end{pmatrix}+z\begin{pmatrix}
+                            0\\-2\\2
+                        \end{pmatrix}\]
+                        Por lo tanto, \[\left\{\begin{pmatrix}
+                            2\\0\\0
+                        \end{pmatrix};\begin{pmatrix}
+                            -3\\3\\0
+                        \end{pmatrix};\begin{pmatrix}
+                            0\\-2\\2
+                        \end{pmatrix}\right\}\]
+                        es un conjunto generador de la imagen. Además, se puede comprobar que el mismo es linealmente independiente. Con lo cual, $Im(T)=\R^{3\times1}$.
+                    \item Inyectividad\\
+                        Para que $T$ sea inyectiva, el núcleo debe estar conformado únicamente por el elemento nulo del dominio, lo cual es cierto. Por lo tanto $T$ es inyectiva.
+                    \item Suryectividad\\
+                        Para que $T$ sea suryectiva, la imagen debe coincidir con el codominio. Es este caso se cumple, así que $T$ es suryectiva.
+                    \item Biyectividad\\
+                        Como $T$ es inyectiva y suryectiva, entonces también es biyectiva.
+                \end{itemize}
+            \item[(c)] $T:\R^4\to\R^2$ dada por $T(x_1,x_2,x_3,x_4)=(0,0)$.
+                \begin{itemize}
+                    \item Núcleo\\
+                        Como todo elemento de $\R^4$ se transforma en el elemento neutro de $\R^2$, $N(T)=\R^4$.
+                    \item Imagen\\
+                        La transformada me devuelve únicamente el vector nulo, entonces $Im(T)=\{(0,0)\}$
+                    \item Inyectividad\\
+                        Como $N(T)\neq \{(0,0)\}$, no es inyectiva.
+                    \item Suryectividad\\
+                        Imagen y codominio no coinciden, entonces no es suryectiva.
+                    \item Biyectividad
+                        Al no ser ni inyectiva ni suryectiva, tampoco es biyectiva.
+                \end{itemize}
+            \item[(e)] La función traza $tr:\C^{n\times n}\to \C$ dada por $tr(A)=\displaystyle\sum_{i=1}^na_{ii}$.
+                \begin{itemize}
+                    \item Núcleo\\
+                        $N(T)=\{A\in\C^{n\times n}:tr(A)=0\}\to \displaystyle\sum_{i=1}^na_{ii}=0\to a_{11}=-\displaystyle\sum_{i=2}^na_{ii}\to $\[N(T)=\left\{A\in\C^{n\times n}:a_{11}=-\displaystyle\sum_{i=2}^na_{ii}\right\}\]
+                    \item Imagen\\
+                        La transformación me devuelve un complejo, el cual es la suma de los elementos de la diagonal principal, como estos elementos pueden ser cualquier número, su transformada también. $Im(T)=\C$
+                    \item Inyectividad\\
+                        No es inyectiva ya que $N(T)\neq\{0_{\C^{n\times n}}\}$.
+                    \item Suryectividad\\
+                        Como la imagen coincide con el codominio, es suryectiva.
+                    \item Biyectividad\\
+                        Si bien es suryectiva, el hecho de que no sea inyectiva provoca que $T$ no sea biyectiva.
+                \end{itemize}
+        \end{enumerate}
+    \end{mdframed}

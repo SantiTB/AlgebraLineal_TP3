@@ -1,0 +1,26 @@
+\item Sean $V$ y $W$ dos $\K$-EV. Supongamos que $V$ es de dimensión finita y sea $T:V\to W$ una transformación lineal. Probar que:
+    \begin{enumerate}
+        \item $T$ es inyectiva si, y sólo si, $dim(Im(T))=dim(V)$.
+            \begin{mdframed}[style=s]
+                \begin{itemize}
+                    \item $(\Rightarrow)$\\
+                        Si $T$ es inyectiva, entonces $N(T)=\{0\}\to dim(N(T))=0$. Por el teorema de las dimensiones $dim(V)=dim(Im(T))+dim(N(T))$
+                        \[\to dim(V)=dim(Im(T))\]
+                    \item $(\Leftarrow)$\\
+                        Los pasos anteriores valen para ambas direcciones.
+                \end{itemize}
+            \end{mdframed}
+        \item $T$ es suryectiva si, y sólo si, $dim(Im(T))=dim(W)$.
+            \begin{mdframed}[style=s]
+                \begin{itemize}
+                    \item $(\Rightarrow)$\\
+                        $T$ es suryectiva $\to W=Im(T)\to dim(W)=dim(Im(T))$
+                    \item $(\Leftarrow)$\\
+                        $dim(Im(T))=dim(W)$, como $Im(T)$ es subespacio de $W$, $Im(T)=W\to T$ es suryectiva.
+                \end{itemize}
+            \end{mdframed}
+        \item Supongamos que $dim(V)=dim(W)$. Luego, $N(T)=\{0\}$ si, y sólo si, $T$ es suryectiva.
+            \begin{mdframed}[style=s]
+                $N(T)=\{0\}\Leftrightarrow dim(N(T))=0\Leftrightarrow dim(V)=dim(W)=dim(Im(T))\Leftrightarrow W=Im(T)\Leftrightarrow T$ es suryectiva.
+            \end{mdframed}
+    \end{enumerate}
